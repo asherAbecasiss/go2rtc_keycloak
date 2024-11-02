@@ -18,6 +18,7 @@ import (
 	"github.com/AlexxIT/go2rtc/internal/http"
 	"github.com/AlexxIT/go2rtc/internal/isapi"
 	"github.com/AlexxIT/go2rtc/internal/ivideon"
+	"github.com/AlexxIT/go2rtc/internal/keycloak"
 	"github.com/AlexxIT/go2rtc/internal/mjpeg"
 	"github.com/AlexxIT/go2rtc/internal/mp4"
 	"github.com/AlexxIT/go2rtc/internal/mpegts"
@@ -41,7 +42,7 @@ func main() {
 	// 1. Core modules: app, api/ws, streams
 
 	app.Init() // init config and logs
-
+	keycloak.Init()
 	api.Init() // init API before all others
 	ws.Init()  // init WS API endpoint
 

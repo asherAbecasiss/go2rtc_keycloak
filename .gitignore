@@ -1,6 +1,7 @@
 .idea/
 .tmp/
-
+front/node_modules
+postgres_data/
 go2rtc.yaml
 go2rtc.json
 

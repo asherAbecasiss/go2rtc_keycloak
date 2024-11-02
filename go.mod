@@ -1,10 +1,13 @@
 module github.com/AlexxIT/go2rtc
 
-go 1.20
+go 1.21
+
+toolchain go1.22.6
 
 require (
-	github.com/asticode/go-astits v1.13.0
+	github.com/MicahParks/keyfunc/v3 v3.3.5
 	github.com/expr-lang/expr v1.16.9
+	github.com/golang-jwt/jwt/v5 v5.2.1
 	github.com/gorilla/websocket v1.5.3
 	github.com/mattn/go-isatty v0.0.20
 	github.com/miekg/dns v1.1.62
@@ -26,7 +29,7 @@ require (
 )
 
 require (
-	github.com/asticode/go-astikit v0.45.0 // indirect
+	github.com/MicahParks/jwkset v0.5.19 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
@@ -45,5 +48,6 @@ require (
 	golang.org/x/net v0.27.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
 	golang.org/x/sys v0.26.0 // indirect
+	golang.org/x/time v0.5.0 // indirect
 	golang.org/x/tools v0.22.0 // indirect
 )

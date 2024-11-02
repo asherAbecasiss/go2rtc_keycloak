@@ -14,6 +14,7 @@ import (
 	"time"
 
 	"github.com/AlexxIT/go2rtc/internal/app"
+	"github.com/AlexxIT/go2rtc/internal/keycloak"
 	"github.com/rs/zerolog"
 )
 
@@ -55,6 +56,7 @@ func Init() {
 	HandleFunc("api/log", logHandler)
 
 	Handler = http.DefaultServeMux // 4th
+	Handler = keycloak.KeycloakApp.MiddlewareAuthKeycloak(Handler)
 
 	if cfg.Mod.Origin == "*" {
 		Handler = middlewareCORS(Handler) // 3rd
