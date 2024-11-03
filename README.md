@@ -50,7 +50,7 @@
 - Create a new **client** in Keycloak specifically for `go2rtc_keycloak`.
   - **Client ID**: Choose a unique name, such as `go2rtc_keycloak`.
   - **Client Protocol**: Select `openid-connect`.
-  - **Access Type**: Set to `confidential` to require client authentication.
+  - **Access Type**: Set to `public`  client authentication off.
 - Configure the **redirect URIs** to include the URL where `front dir app` will be hosted, sveltekit app http://127.0.0.1:5173/*.
 - Assign **roles** as needed for controlling access to specific streams and resources.
 - Save the client settings
