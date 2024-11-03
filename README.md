@@ -64,7 +64,23 @@
    - go to front dir
    ```bash
        pnpm i
+   ```
+   
+   - go to front dir `src/lib/keycloak.js`  and edit this:
+     
+   	```bash
+   export const keycloak = new Keycloak({
+	url: "http://{your-keycloak-server}:{keycloak-port}/",
+        realm: "your-realm",
+        clientId: "your-client_id",
+	});
+    ```
+    - run the app:
+      
+      	```bash
        pnpm run dev
+       ```
+       	
 
 5. run go2rtc:
 
